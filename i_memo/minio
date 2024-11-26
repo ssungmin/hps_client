@@ -1,0 +1,27 @@
+Minio 서버 실행
+
+
+https://www.haedongg.net/tag/minio/
+
+/home/svcapp_su/minio
+./minio_start.sh
+
+
+- 포트오픈 확인
+
+netstat -nap | grep LISTEN
+
+ps ax | grep minio
+sudo lsof -i -P -n | grep LISTEN
+
+
+#!/bin/bash
+LOG_FILE="$PWD/minio.log"
+export MINIO_ROOT_USER=minioadmin
+export MINIO_ROOT_PASSWORD=minioadmin
+nohup minio server --console-address :9001 --address :9000 http://storage-{1...7}:9000/DATA/minio   >> $LOG_FILE 2>&1 &
+#nohup minio server --address :9000 --console-address :9001 /DATA/minio  >> $LOG_FILE
+MINIO_PID=$!
+if [ ! -z $MINIO_PID ] ; then
+   echo "$MINIO_PID" > minio.pid
+fi

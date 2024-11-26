@@ -1,0 +1,1 @@
+['vacumn', 'waterpurify', 'airpurifier','ggbus','android', 'hotspot', 'iphone', 'galaxy', 'xiaomi', 'huawei', 'oppo','dashcam', 'audi', 'bmw', 'socar', 'mayton', 'porsche', 'kia', 'cayenne', 'chevrolet','roaming', 'tpocket', 'ktegg']

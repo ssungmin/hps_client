@@ -1,0 +1,27 @@
+기지국 변환 
+
+
+
+
+## LTE
+ENBID = ROUNDDOWN(ECGI/256,0)
+SECTOR = ROUNDDOWN(MOD(ECGI,256)/4,0)
+ECGI = ENBID*POWER(2,8)+SECTOR*POWER(2,2)+3
+
+## 5G
+GNBID = ROUNDDOWN(NCGI/16384,0)
+SECTOR = ROUNDDOWN(MOD(NCGI,16384),0)
+NCGI = GNBID *POWER(2,14)+SECTOR
+
+
+접근제어신청
+
+ . 정보보안포탈 - nw/서버보안 - 서버/db 접근제어솔루션 사용신청-서버접속권한신청(담당자: 김도연, 장유정)
+ . 접속방법
+    - https://tidc.sktelecom.com
+https://tidcex.sktelecom.com/main.html
+   - 서버검색 및 선택
+   - os 계정 정보
+      1. 서비스구동 svcapp   / svcapp_center!07
+      2. 단순조회.  svcapp_ro / svcapp_ro_center!07
+      3. Sudo 권한  svcapp_su / svcapp_su_center!07

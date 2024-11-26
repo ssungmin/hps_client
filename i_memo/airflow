@@ -1,0 +1,15 @@
+가상환경 실행
+
+pyenv activate airflow
+
+
+
+운영서버
+
+
+Airflow
+172.27.12.112:8080
+
+Minio
+
+172.27.11.56:9001
